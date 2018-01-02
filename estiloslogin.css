@@ -58,7 +58,7 @@ a:not([href]):not([tabindex]):focus{
 }
 @media (min-width:576px){
     .container{
-        max-width:540px
+        max-width:540px;
     }
 }
 @media (min-width:768px){
@@ -684,6 +684,9 @@ a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-primary{
 .mt-3,.my-3{
     margin-top:1rem!important
 }
+.mt-4,.my-4{
+    margin-top:2rem!important
+}
 .mt-5,.my-5{
     margin-top:3rem!important
 }
@@ -702,6 +705,9 @@ a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-primary{
 @media (min-width:576px){
     .mt-sm-3,.my-sm-3{
         margin-top:1rem!important
+    }
+    .mt-sm-4,.my-sm-4{
+        margin-top:2rem!important
     }
     .mt-sm-5,.my-sm-5{
         margin-top:3rem!important
@@ -723,6 +729,9 @@ a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-primary{
     .mt-md-3,.my-md-3{
         margin-top:1rem!important
     }
+    .mt-md-4,.my-md-4{
+        margin-top:2rem!important
+    }
     .mt-md-5,.my-md-5{
         margin-top:3rem!important
     }
@@ -743,6 +752,9 @@ a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-primary{
     .mt-lg-3,.my-lg-3{
         margin-top:1rem!important
     }
+    .mt-lg-4,.my-lg-4{
+        margin-top:2rem!important
+    }
     .mt-lg-5,.my-lg-5{
         margin-top:3rem!important
     }
@@ -762,6 +774,9 @@ a.btn.disabled,fieldset[disabled] a.btn{pointer-events:none}.btn-primary{
 @media (min-width:1200px){
     .mt-xl-3,.my-xl-3{
         margin-top:1rem!important
+    }
+    .mt-xl-4,.my-xl-4{
+        margin-top:2rem!important
     }
     .mt-xl-5,.my-xl-5{
         margin-top:3rem!important
