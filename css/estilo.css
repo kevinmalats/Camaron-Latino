@@ -16,12 +16,6 @@
 .navbar {
 	margin-bottom: 0;
 }
-  .jumbotron-km { 
-	 background: #428BCA;
-     background-image:  url("../imagenes/security-guar.jpg");
-     color: green;
-     height: 150px;
-}
 
 .navbar-collapse .nav .titulo {
 	font-size: 25px;
