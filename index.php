@@ -33,15 +33,13 @@
         </ul>
         <ul class="nav navbar-nav navbar-center">
             <li><a href="index.php">Inicio</a></li>
-  
             <li class="dropdown">
             	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
             		Servicios <span class="caret"></span>
             	</a>
             	<ul class="dropdown-menu" role="menu">
-            		<li><a href="#">Localizar Guarderías</a></li>
-            		<li><a href="#">Ver Actividades</a></li>
-            		<li><a href="#">Sé parte</a></li>
+            		<li><a href="paginas/servicios.html">ver</a></li>
+            		<li><a href="#">añadir</a></li>
             	</ul>
             </li>
             <li><a href="paginas/sugerencias.html">Contactenos</a></li>
@@ -58,10 +56,7 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
            <li><a href="paginas/login.html">Login</a></li>
-             
-            </ul>
-    
-       
+        </ul>
     </div>
 </nav>
 		
