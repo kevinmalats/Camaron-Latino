@@ -7,8 +7,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scle=1.0">
  
- <link rel="stylesheet" href="index.css">
- <link rel="stylesheet" type="text/css" href="estilo.css">
+ <link rel="stylesheet" href="css/index.css">
+ <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
   <title>Inicio</title>
 
@@ -29,14 +29,14 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-        <img src="LOGOcamaron.jpg">
+        <img src="img/LOGOcamaron.jpg" class="logo">
         </ul>
         <ul class="nav navbar-nav navbar-center">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
   
             <li class="dropdown">
             	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-            		Guarderías <span class="caret"></span>
+            		Servicios <span class="caret"></span>
             	</a>
             	<ul class="dropdown-menu" role="menu">
             		<li><a href="#">Localizar Guarderías</a></li>
@@ -44,7 +44,7 @@
             		<li><a href="#">Sé parte</a></li>
             	</ul>
             </li>
-            <li><a href="sugerencias.html">Contactenos</a></li>
+            <li><a href="paginas/sugerencias.html">Contactenos</a></li>
            <li><a href="">Quienes somos</a></li>
 
         </ul>
@@ -57,7 +57,7 @@
         	</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-           <li><a href="login.html">Login</a></li>
+           <li><a href="paginas/login.html">Login</a></li>
              
             </ul>
     
