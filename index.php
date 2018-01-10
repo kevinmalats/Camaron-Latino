@@ -4,14 +4,9 @@
 <meta charset="utf-8">    
  <link rel="stylesheet" href="css/cuerpo.css">
  <link rel="stylesheet" href="css/in.css">
-
+ <link rel="stylesheet" href="css/estilo.css">
     
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
-  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+
 
   <title>Inicio</title>
 
@@ -104,13 +99,7 @@
  
     <!---->
   </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/wow.js"></script>
-  <script src="js/jquery.bxslider.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+
 
     
 <script src="jquery-1.5.2.min.js" type="text/javascript"></script>
