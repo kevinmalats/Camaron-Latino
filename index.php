@@ -1,16 +1,17 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scle=1.0">
- 
-    
+<meta charset="utf-8">    
  <link rel="stylesheet" href="css/cuerpo.css">
  <link rel="stylesheet" href="css/in.css">
 
+    
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <title>Inicio</title>
 
@@ -26,7 +27,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a  href="index.php"><img class="peqe" src="img/camaronlogofinal.png"></a>
+          <a  href="index.php"><img class="peqe" src="img/camaronlogofinal.png" alt=""></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -58,13 +59,62 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-<section class="main container">
-
-  
- </section>
+<div class="loader"></div>
+  <div id="myDiv">
+    <!--HEADER-->
+    <div class="header">
+      <div class="bg-color">
+      
+        <div class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="banner-info text-center wow fadeIn delay-05s">
+                <h1 class="bnr-title">Unete<span></span></h1>
+                <h2 class="bnr-sub-title">con nosotros crecerás!!!</h2>
+                <p class="bnr-para">En nuestra comunidad con tu ayuda juntos mejoraremos el sector camaronero.<br> No lo pienses mas </p>
+                <div class="brn-btn">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ HEADER-->
+    <!---->
+    
+    <!---->
+    <!---->
+    
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    
+    <!---->
+    <!---->
+   
+    <!---->
+   
+    <!---->
+    
+    <!---->
+    <!---->
  
-  <script src="https://code.jquery.com/jquery-latest.js"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!---->
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+    
+<script src="jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="jcarousellite_1.0.1c5.js" type="text/javascript"></script>
+    
 </body>
 </html>
