@@ -29,7 +29,7 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-        <img src="img/camaron2.png" class="logo">
+            <a href="index.php"><img src="img/camaronlogofinal.png" class="logo"></a>
         </ul>
         <ul class="nav navbar-nav navbar-center">
             <li><a href="index.php">Inicio</a></li>
@@ -39,8 +39,8 @@
             	</a>
             	<ul class="dropdown-menu" role="menu">
             		<li><a href="paginas/servicios.html">electromecanico</a></li>
-                    <li><a href="">civil</a></li>
-                    <li><a href="">otros</a></li>
+                    <li><a href="paginas/servicios2.html">civil</a></li>
+                    <li><a href="paginas/servicios3.html">otros</a></li>
             		<li><a href="#">añadir</a></li>
             	</ul>
             </li>
@@ -50,9 +50,9 @@
             	</a>
             	<ul class="dropdown-menu" role="menu">
             		<li><a href="paginas/productos.html">alimenticio</a></li>
-                    <li><a href="">larvas</a></li>
-                    <li><a href="">otros</a></li>
-            		<li><a href="#">añadir</a></li>
+                    <li><a href="paginas/productos2.html">larvas</a></li>
+                    <li><a href="paginas/productos3.html">otros</a></li>
+            		<li><a href="">añadir</a></li>
             	</ul>
             </li>
             <li><a href="paginas/sugerencias.html">Contactenos</a></li>
