@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a  href="index.php"><img class="peqe" src="img/camaronlogofinal.png" alt=""></a>
+          <a  href="index.php"><img class="peque" src="img/camaronlogofinal.png" alt=""></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -68,6 +68,7 @@
                 <h2 class="bnr-sub-title">con nosotros crecerás!!!</h2>
                 <p class="bnr-para">En nuestra comunidad con tu ayuda juntos mejoraremos el sector camaronero.<br> No lo pienses mas </p>
                 <div class="brn-btn">
+                <img src="img/a.png">
                   
                 </div>
               </div>
@@ -102,8 +103,9 @@
 
 
     
-<script src="jquery-1.5.2.min.js" type="text/javascript"></script>
-<script src="jcarousellite_1.0.1c5.js" type="text/javascript"></script>
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     
 </body>
 </html>
