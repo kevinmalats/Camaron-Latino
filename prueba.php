@@ -1,15 +1,12 @@
 <?php
-include("credencial.php");
-class prueba
+class rol
 {
-    private $clave;
-    private $crendencial;
+    private $idrol;
+    private $nombre;
+    private $descripcion;
 
-     function __construct($clave) {
-       $this->clave = $clave;
+     function __construct() {
      }
-    
-     
     
      function setCredencial($Credencial){
        $this->Credencial = $Credencial;

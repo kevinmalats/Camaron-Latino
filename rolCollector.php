@@ -3,10 +3,10 @@
 include_once('rol.php');
 include_once('Collector.php');
 
-class credencialCollector extends Collector
+class rolCollector extends Collector
 {
   
-  function showCredencial() {
+  function showRol() {
     $rows = self::$db->getRows("SELECT * FROM rol ");        
     $arrayRol= array();        
     foreach ($rows as $c){
@@ -15,7 +15,7 @@ class credencialCollector extends Collector
     }
     return $arrayRol;        
   }
-    function deleteCredencial($id){
+    function deleteRol($id){
         echo "processing delete id:". $id ."<br>";
         $deleterow = self::$db->deleteRow("DELETE FROM public.rol WHERE id_rol= ?", arrSSay("{$id}"));
         echo "delete completed<br>";
