@@ -1,3 +1,5 @@
+<?php
+
 class sugerencia
 {
 
@@ -8,74 +10,61 @@ private $correo;
 private $telefono;
 private $mensaje;
 
-function __construct($nombre, $fecha, $correo, $telefono, $mensaje){
-$this->nombre=$nombre;
-$this->=fecha=$fecha;
-$this->=correo=$correo;
-$this->=telefono=$telefono;
-$this->=mensaje=$mensaje;
+function __construct(){
+
 }
 
-function __construct($idsugerencia,$nombre, $fecha, $correo, $telefono, $mensaje){
-$this->sugerencia=$sugerencia;
-$this->nombre=$nombre;
-$this->=fecha=$fecha;
-$this->=correo=$correo;
-$this->=telefono=$telefono;
-$this->=mensaje=$mensaje;
-}
-
-function setsugerencia($idsugerencia){
+function setIdsugerencia($idsugerencia){
 $this->idsugerencia=$idsugerencia;
 }
 
-function getsugerencia(){
+function getIdsugerencia(){
 return $this->idsugerencia;
 }
 
-function setnombre($nombre){
+function setNombre($nombre){
 $this->nombre=$nombre;
 }
 
-function getnombre(){
+function getNombre(){
 return $this->nombre;
 }
 
-function setfecha($fecha){
+function setFecha($fecha){
 $this->fecha=$fecha;
 }
 
-function getfecha(){
+function getFecha(){
 return $this->fecha;
 }
 
-function setcorreo($correo){
+function setCorreo($correo){
 $this->correo=$correo;
 }
 
-function getcorreo(){
+function getCorreo(){
 return $this->correo;
 }
 
 
-function settelefono($telefono){
+function setTelefono($telefono){
 $this->telefono=$telefono;
 }
 
-function gettelefono(){
+function getTelefono(){
 return $this->telefono;
 }
 
 
 
-function setmensaje($mensaje){
+function setMensaje($mensaje){
 $this->mensaje=$mensaje;
 }
 
-function getmensaje(){
+function getMensaje(){
 return $this->mensaje;
 }
-
+?> 
 
 
 

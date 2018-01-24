@@ -1,5 +1,5 @@
 <?php
-include_once('Demo.php');
+include_once('sugerencia.php');
 include_once('Collector.php');
 
 class sugerenciaCollector extends Collector

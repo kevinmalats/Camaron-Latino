@@ -1,45 +1,39 @@
-class tipoproducto
+<?php
+class tipoProducto
 {
 
-private $idtipoproducto;
+private $idTipoProducto;
 private $nombre;
 private $descripcion;
 
-function __construct($nombre, $descripcion){
-$this->nombre=$nombre;
-$this->=descripcion=$descripcion
+function __construct(){
+
 }
 
-function __construct($idtipoproducto,$nombre, $descripcion){
-$this->nombre=$nombre;
-$this->=descripcion=$descripcion;
-$this->=idtipoproducto=$idtipoproducto;
+function setIdTipoProducto($idTipoProducto){
+$this->idTipoProducto=$idTipoProducto;
 }
 
-function setIdtipoproducto($idtipoproducto){
-$this->idtipoproducto=$idtipoproducto;
+function getIdTiPoproducto(){
+return $this->idTipoProducto;
 }
 
-function getIdtipoproducto(){
-return $this->idtipoproducto;
-}
-
-function setnombre($nombre){
+function setNombre($nombre){
 $this->nombre=$nombre;
 }
 
-function getnombre(){
+function getNombre(){
 return $this->nombre;
 }
 
-function setdescripcion($descripcion){
+function setDescripcion($descripcion){
 $this->descripcion=$descripcion;
 }
 
-function getdescripcion(){
+function getDescripcion(){
 return $this->descripcion;
 }
-
+?> 
 
 
 
