@@ -1,6 +1,6 @@
 <?php
 
-include_once('Demo.php');
+include_once('credencial.php');
 include_once('Collector.php');
 
 class credencialCollector extends Collector
