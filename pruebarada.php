@@ -9,5 +9,5 @@ $test->setNombre($idnombre);
 $test->setMensaje($idmensaje);
 echo "El ID sugerencia es: ". $test->getIdsugerencia();
 echo "El Id del nombre es: " .$test->getNombre();
-echo "EL mensaje es es: " .$test-> getMensaje();
+echo "EL mensaje es es: " .$test->getMensaje();
 ?>
