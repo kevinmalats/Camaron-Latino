@@ -5,3 +5,4 @@ script:
  - php prueba.php
  - php pruebaJennyfer.php
  - php pruebamoncayo.php
+ - php pruebarada.php
