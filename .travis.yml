@@ -3,3 +3,4 @@ php:
  - '7.1'
 script:
  - php prueba.php
+ - php pruebaJennyfer.php
