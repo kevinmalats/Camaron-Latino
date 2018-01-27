@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,11 +71,11 @@
                   <div class="form-group">
                     <input class="form-control" placeholder="Ingrese email address">
                   </div>
-                  <a class="btn btn-primary btn-block" href="login.html">Resetear contraseña</a>
+                  <a class="btn btn-primary btn-block" href="login.php">Resetear contraseña</a>
                 </form>
                 <div class="text-center">
-                  <a class="d-block small mt-3" href="registre.html">Registro</a>
-                  <a class="d-block small" href="login.html">Login</a>
+                  <a class="d-block small mt-3" href="registre.php">Registro</a>
+                  <a class="d-block small" href="login.php">Login</a>
                 </div>
               </div>
             </div>

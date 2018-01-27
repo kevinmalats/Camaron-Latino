@@ -21,6 +21,13 @@
     border:1px solid #c52d2f;
     border-radius:.25rem
 }
+.containererror{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    height: 400px;
+    margin-left: auto;
+}
 .card-login {
   max-width: 30rem;
 }

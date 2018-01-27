@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,33 +58,52 @@
             </div><!--/.container-->
         </nav><!--/nav-->
     </header><!--/header-->
-    <section id="tamasec"><h2 class="center2">Inicie Sesion</h2>
-      <div class="containerlogin">
-        <div class="card card-login mx-auto mt-5">
-          <div class="card-header">Login</div>
-            <div class="card-body">
+    <section id="tamasec"><h2 class="center2">Registro</h2>
+        <div class="containerlogin">
+            <div class="card card-register mx-auto mt-5">
+              <div class="card-header">Registro de cuenta</div>
+              <div class="card-body">
                 <form>
-                    <div class="form-group">
-                        <label>Correo electrónico</label>
-                        <input class="form-control estiloborder" placeholder="">
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <label>Ingrese nombre</label>
+                        <input class="form-control" placeholder="">
+                      </div>
+                      <div class="col-md-6">
+                        <label>Ingrese cédula o ruc</label>
+                        <input class="form-control" placeholder="">
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <label >Contraseña</label>
+                  </div>
+                  <div class="form-group">
+                    <label>Correo electrónico</label>
+                    <input class="form-control" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <label>Contraseña</label>
                         <input class="form-control" type="password" placeholder="">
+                      </div>
+                      <div class="col-md-6">
+                        <label>Confirme contraseña</label>
+                        <input class="form-control"  type="password" placeholder="">
+                      </div>
                     </div>
-                    <a class="btn btn-primary btn-block" href="index.html">Login</a>
+                  </div>
+                  <a class="btn btn-primary btn-block" href="login.php">Registro</a>
                 </form>
                 <div class="text-center">
-                    <br>
-                    <a class="d-block small mt-3" href="registre.html">Registre una Cuenta</a>
-                    <a class="d-block small" href="forgot.html">Olvidó contraseña?</a>
+                  <a class="d-block small mt-3" href="login.php">Login</a>
+                  <a class="d-block small" href="forgot.php">Olvidó contraseña?</a>
                 </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
     </section>     
-    <br>
-        <footer id="footer" class="midnight-blue">
+    
+    <footer id="footer" class="midnight-blue">
             <div class="container">
                 <div class="row">
                       <div class="col-sm-6">
