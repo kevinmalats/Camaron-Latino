@@ -64,6 +64,7 @@ $this->mensaje=$mensaje;
 function getMensaje(){
 return $this->mensaje;
 }
+}
 ?> 
 
 
