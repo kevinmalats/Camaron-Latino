@@ -22,6 +22,19 @@ class usuarioCollector extends Collector
         }
         return $arrayUsuario;        
     }
+    function comprobarUsuarioxIdCredencial($idusu) {
+    $rows = self::$db->getRows("SELECT * FROM public.usuario WHERE id_credencial=? ", array ("{$idusu}"));        
+    $ObjUsuario = new usuario();
+    $ObjUsuario->setIdUsuario($rows[0]{'id_usuario'});
+    $ObjUsuario->setNombre($rows[0]{'nombre'});
+    $ObjUsuario->setIdentificacion($rows[0]{'identificacion'});
+    $ObjUsuario->setCorreo($rows[0]{'correo'});
+    $ObjUsuario->setTelefono($rows[0]{'telefono'});
+    $ObjUsuario->setDireccion($rows[0]{'direccion'});
+    $ObjUsuario->setIdRol($rows[0]{'id_rol'});
+    $ObjUsuario->setIdcredencial($rows[0]{'id_credencial'});
+    return $ObjUsuario;        
+    }
     function comprobarUsuarioxCedula($ced) {
     $rows = self::$db->getRows("SELECT * FROM public.usuario WHERE identificacion=? ", array ("{$ced}"));        
     $ObjUsuario = new usuario();
@@ -71,11 +84,7 @@ class usuarioCollector extends Collector
         echo "crear completed<br>";
     }
 }
-$DemoCollectorObj = new usuarioCollector();
-
-foreach ($DemoCollectorObj->showUsuarios() as $c){
-  echo "<div>"; 
-  echo $c->getNombre() . "   &&  " .$c->getIdRol() . "   &&   " . $c->getTelefono();
-  echo "</div>";
-}
+    $objColector2= new usuarioCollector();
+    $usuario = $objColector2->comprobarUsuarioxIdCredencial(3);
+    echo $usuario->getNombre() . "   &&  " .$usuario->getIdRol() . "   &&   " . $usuario->getTelefono();
 ?>

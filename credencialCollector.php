@@ -20,7 +20,6 @@ class credencialCollector extends Collector
   }
     function showCredencial($id) {
       $rows = self::$db->getRows("SELECT * FROM public.credencial WHERE id_credencial= ?", array("{$id}"));        
-      $arrayCredencial= array(); 
       $aux = new credencial();
       foreach ($rows as $c){ 
        $aux->setIdCredencial($c{'id_credencial'});
@@ -35,15 +34,17 @@ class credencialCollector extends Collector
         echo "delete completed<br>";
     }
     function consultarCredencial($usuario, $clave) {
-    $rows = self::$db->getRows("SELECT * FROM public.credencial WHERE usuario=? AND clave=?  ", array ("{$usuario}","{$clave}"));        
+    $rows = self::$db->getRows("SELECT * FROM public.credencial WHERE usuario=? AND clave=?  ", array("{$usuario}","{$clave}"));        
     $ObjCredencial = new credencial();
-    $ObjCredencial->setIdCredencial($rows[0]{'id_credencial'});
-    $ObjCredencial->setUsuario($rows[0]{'usuario'});
-    $ObjCredencial->setClave($rows[0]{'clave'});
+    foreach ($rows as $c){ 
+        $ObjCredencial->setIdCredencial($c{'id_credencial'});
+        $ObjCredencial->setUsuario($c{'usuario'});
+        $ObjCredencial->setClave($c{'clave'});
+    }
     return $ObjCredencial;        
     }
     function comprobarCredencial($usuario) {
-    $rows = self::$db->getRows("SELECT * FROM public.credencial WHERE usuario=? ", array ("{$usuario}"));        
+    $rows = self::$db->getRows("SELECT * FROM public.credencial WHERE usuario=? ", array("{$usuario}"));        
     $ObjCredencial = new credencial();
     $ObjCredencial->setIdCredencial($rows[0]{'id_credencial'});
     $ObjCredencial->setUsuario($rows[0]{'usuario'});
@@ -54,4 +55,11 @@ class credencialCollector extends Collector
         $insertarrow = self::$db->insertRow("INSERT INTO public.credencial (usuario,clave) VALUES (?,?)", array ("{$usu}","{$cla}"));
     }
 }
+    $objColector = new credencialCollector();
+    
+    $credencial = $objColector->comprobarCredencial('cmoncayo');
+    echo "id: ". $credencial->getIdCredencial()."<br>";
+    echo "id: ". $credencial->getUsuario()."<br>";
+    echo "id: ". $credencial->getClave()."<br>";
+    print_r($credencial);
 ?>
