@@ -24,7 +24,7 @@ class registro
        $this->descripcion = $descripcion;
      } 
      function getDescripcion(){
-       return $this->Sdescripcion;
+       return $this->descripcion;
      }
 }
 ?> 
