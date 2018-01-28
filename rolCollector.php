@@ -20,5 +20,9 @@ class rolCollector extends Collector
         $deleterow = self::$db->deleteRow("DELETE FROM public.rol WHERE id_rol= ?", arrSSay("{$id}"));
         echo "delete completed<br>";
     }
+    function crearrol($nom,$des){
+        $insertarrow = self::$db->insertRow("INSERT INTO public.rol (nombre,descripcion) VALUES (?,?)", array ("{$nom}","{$des}"));
+        echo "crear completed<br>";
+    }
 }
 ?>

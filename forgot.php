@@ -42,17 +42,36 @@ session_start();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
                 </div>
                 
                  <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="about-us.html">Nosotros</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="productos.html">Productos</a></li> 
-                        <li><a href="contact-us.html">Contactenos</a></li> 
-                        <li><a href="login.html">Login</a></li>
+                        <li class="active"><a href="index.php">Inicio</a></li>
+                        <li><a href="about-us.php">Nosotros</a></li>
+                        <li><a href="servicios.php">Servicios</a></li>
+                        <li><a href="productos.php">Productos</a></li> 
+                        <li><a href="contact-us.php">Contactenos</a></li> 
+                         <?php
+                            if ($_SESSION){
+                        ?>
+                            <li><a href="logout.php">Logout</a></li>
+                        <?php
+                                if ($_SESSION["perfil"]=="admin"){
+                        ?>
+                            <li><a href="index.php"><strong>Bienvenido:  </strong> <?php echo $_SESSION['id'];?></a></li>
+                        <?php
+                                }else{
+                        ?>
+                            <li><a title="Bienvenido" ><strong>Bienvenido:  </strong> <?php echo $_SESSION['id'];?></a></li>
+                        <?php
+                                }
+                            }else{
+                        ?>
+                            <li><a href="login.php">Login</a></li>
+                        <?php
+                            }
+                        ?>
                     </ul>
                 </div>
             </div><!--/.container-->

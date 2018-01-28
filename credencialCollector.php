@@ -43,6 +43,9 @@ class credencialCollector extends Collector
     $ObjCredencial->setClave($rows[0]{'clave'});
     return $ObjCredencial;        
     }
+    function crearcredencial($usu,$cla){
+        $insertarrow = self::$db->insertRow("INSERT INTO public.credencial (usuario,clave) VALUES (?,?)", array ("{$usu}","{$cla}"));
+    }
 }
 $DemoCollectorObj = new credencialCollector();
 

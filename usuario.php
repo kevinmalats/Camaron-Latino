@@ -28,13 +28,13 @@ class usuario
      function setIdentificacion($identificacion){
        $this->identificacion = $identificacion;
      } 
-     function getCorreo(){
+     function getIdentificacion(){
        return $this->identificacion;
      }
      function setCorreo($correo){
        $this->correo = $correo;
      } 
-     function getIdUsuario(){
+     function getCorreo(){
        return $this->correo;
      }
      function setTelefono($telefono){
