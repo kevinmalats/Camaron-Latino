@@ -79,9 +79,15 @@ session_start();
 
     <section id="error" class="container text-center">
         <div class="containererror">
-            <h1>404, Page not found</h1>
-            <p>The Page you are looking for doesn't exist or an other error occurred.</p>
-            <a class="btn btn-primary" href="index.html">Regresar a inicio</a>
+              <?php
+                 if($_GET["mensaje"]){
+                ?>
+                        <h1>Mensaje de proceso</h1>
+                        <div class="text-center"><p><?php echo $_GET["mensaje"];?></p></div>
+                <?php
+                 }
+                ?>
+            <a class="btn btn-primary" href="index.php">Regresar a inicio</a>
         </div>
     </section><!--/#error-->
 

@@ -13,6 +13,7 @@
     }else{
          /*$mensaje="login incorrecto";-->
          header("location:../pages/login.php?mensaje=$mensaje");*/
-        header("location:404.php"); 
+        $mensaje="login incorrecto";
+        header("location:404.php?mensaje=$mensaje"); 
     }
 ?>

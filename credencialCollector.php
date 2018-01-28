@@ -1,4 +1,3 @@
-
 <?php
 
 include_once('credencial.php');
@@ -11,7 +10,7 @@ class credencialCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM public.credencial ");        
     $arrayCredencial= array();        
     foreach ($rows as $c){
-      $aux = new Credencial();
+      $aux = new credencial();
       $aux->setIdCredencial($c{'id_credencial'});
       $aux->setUsuario($c{'usuario'});
       $aux->setClave($c{'clave'});
@@ -22,7 +21,7 @@ class credencialCollector extends Collector
     function showCredencial($id) {
       $rows = self::$db->getRows("SELECT * FROM public.credencial WHERE id_credencial= ?", array("{$id}"));        
       $arrayCredencial= array(); 
-      $aux = new Credencial();
+      $aux = new credencial();
       foreach ($rows as $c){ 
        $aux->setIdCredencial($c{'id_credencial'});
        $aux->setUsuario($c{'usuario'});
@@ -55,15 +54,4 @@ class credencialCollector extends Collector
         $insertarrow = self::$db->insertRow("INSERT INTO public.credencial (usuario,clave) VALUES (?,?)", array ("{$usu}","{$cla}"));
     }
 }
-$DemoCollectorObj = new credencialCollector();
-
-foreach ($DemoCollectorObj->showCredenciales() as $c){
-  echo "<div>"; 
-  echo $c->getIdCredencial() . "   &&  " .$c->getUsuario() . "   &&   " . $c->getClave();
-  echo "</div>";
-}
-$id = 1;
-$aux = $DemoCollectorObj->showCredencial($id);
-echo $aux->getIdCredencial() . "   &&  " .$aux->getUsuario() . "   &&   " . $aux->getClave();
-
 ?>

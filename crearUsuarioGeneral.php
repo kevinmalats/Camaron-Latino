@@ -10,17 +10,37 @@
     $usuari = $_POST["usu"];
     $contra = $_POST["con"];
     $idrol = "2";
-    $idcre = "";
 
     $objColector= new credencialCollector();
     $credencial=$objColector->comprobarCredencial("$usuari");
-    
+    $objColector2= new usuarioCollector();
+    $usuario1=$objColector2->comprobarUsuarioxCedula("$cedula");
+    $usuario2=$objColector2->comprobarUsuarioxCorreo("$correo");
+    $usuario3=$objColector2->comprobarUsuarioxTelefono("$telefo");
     if($credencial->getUsuario()){
-        $mensaje="usuario existente";
+        $mensaje="este usuario ya esta registrado";
         header("location:registre.php?mensaje=$mensaje");
-       
     }else{
-         header("location:login.php");
+        if($usuario1->getIdentificacion()){
+            $mensaje="numero de identificacion ya registrado";
+            header("location:registre.php?mensaje=$mensaje");
+        }else{
+            if($usuario2->getCorreo()){
+                $mensaje="este correo ya esta registrado";
+                header("location:registre.php?mensaje=$mensaje");
+            }else{
+                if($usuario3->getTelefono()){
+                    $mensaje="este telefono ya esta registrado";
+                    header("location:registre.php?mensaje=$mensaje");
+                }else{
+                    $cred = $objColector->crearcredencial($usuari,$contra);
+                    $idcre = $objColector->consultarCredencial($usuari,$contra);
+                    $prov = $objColector2->crearusuario($nombre,$cedula,$correo,$telefo,$direcc,$idcre->getIdCredencial(),$idrol);
+                    $mensaje="Usuario creado coreectamente";
+                    header("location:404.php?mensaje=$mensaje"); 
+                } 
+            }
+        }   
     }
     /*$DemoCollectorObj = new DemoCollector();
     $ObjDemo = $DemoCollectorObj->createDemo($valor);
