@@ -97,7 +97,7 @@ session_start();
                 </form>
                 <div class="text-center">
                     <br>
-                    <a class="d-block small mt-3" href="registre.php">Registre una Cuenta</a>
+                    <a class="d-block small mt-3" href="registre.php?mensaje=">Registre una Cuenta</a>
                     <a class="d-block small" href="forgot.php">Olvidó contraseña?</a>
                 </div>
           </div>

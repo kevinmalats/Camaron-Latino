@@ -52,7 +52,7 @@ session_start();
                         <li><a href="servicios.php">Servicios</a></li>
                         <li><a href="productos.php">Productos</a></li> 
                         <li><a href="contact-us.php">Contactenos</a></li> 
-                         <?php
+                        <?php
                             if ($_SESSION){
                         ?>
                             <li><a href="logout.php">Logout</a></li>
@@ -78,20 +78,27 @@ session_start();
         </nav><!--/nav-->
     </header><!--/header-->
     <section id="tamasec"><h2 class="center2">Registro</h2>
+        <?php
+         if($_GET["mensaje"]){
+        ?>
+              <div class="text-center"><p><?php echo $_GET["mensaje"];?></p></div>
+        <?php
+         }
+        ?>
         <div class="containerlogin">
             <div class="card card-register mx-auto mt-5">
               <div class="card-header">Registro de cuenta</div>
               <div class="card-body">
-                <form>
+                <form action="crearUsuarioGeneral.php" method="post">
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col-md-6">
                         <label>Ingrese nombre</label>
-                        <input class="form-control" placeholder="">
+                        <input class="form-control" placeholder="" name="nom">
                       </div>
                       <div class="col-md-6">
                         <label>Ingrese cédula o ruc</label>
-                        <input class="form-control" placeholder="">
+                        <input class="form-control" placeholder="" name="ced">
                       </div>
                     </div>
                   </div>
@@ -99,30 +106,31 @@ session_start();
                     <div class="form-row">
                       <div class="col-md-6">
                         <label>Ingrese telefono</label>
-                        <input class="form-control" placeholder="">
+                        <input class="form-control" placeholder="" name="tel">
                       </div>
                       <div class="col-md-6">
                         <label>Correo electrónico</label>
-                        <input class="form-control" placeholder="">
+                        <input class="form-control" placeholder="" name="cor">
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <label>Direccion</label>
-                    <input class="form-control" placeholder="">
+                    <input class="form-control" placeholder="" name="dir">
                   </div>
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col-md-6">
                         <label>Usuario</label>
-                        <input class="form-control" type="text" placeholder="">
+                        <input class="form-control" type="text" placeholder="" name="usu">
                       </div>
                       <div class="col-md-6">
                         <label>Contraseña</label>
-                        <input class="form-control"  type="password" placeholder="">
+                        <input class="form-control"  type="password" placeholder="" name="con">
                       </div>
                     </div>
                   </div>
+                     <button type="submit"> Registrar </button>
                   <a class="btn btn-primary btn-block" href="login.php">Registro</a>
                 </form>
                 <div class="text-center">
