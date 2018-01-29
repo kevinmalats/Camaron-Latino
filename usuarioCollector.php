@@ -7,8 +7,9 @@ class usuarioCollector extends Collector
 {
     function showUsuarios() {
         $rows = self::$db->getRows("SELECT * FROM public.usuario ");        
-        $arrayUsuario= array();        
+             
         foreach ($rows as $c){
+          $arrayUsuario= array();   
           $aux = new usuario();
           $aux->setIdUsuario($c{'id_usuario'});
           $aux->setNombre($c{'nombre'});
