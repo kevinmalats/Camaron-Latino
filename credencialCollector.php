@@ -8,8 +8,9 @@ class credencialCollector extends Collector
   
   function showCredenciales() {
     $rows = self::$db->getRows("SELECT * FROM public.credencial ");        
-    $arrayCredencial= array();        
+           
     foreach ($rows as $c){
+    $arrayCredencial= array(); 
       $aux = new credencial();
       $aux->setIdCredencial($c{'id_credencial'});
       $aux->setUsuario($c{'usuario'});
