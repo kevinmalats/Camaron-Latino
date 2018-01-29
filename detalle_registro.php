@@ -8,9 +8,7 @@ class detalle_registro
     private $descripcion;
 
      function __construct() {
-     }
-    
- 
+     }  
      function setIdDetalleRegistro($idDetalleRegistro){
        $this->idDetalleRegistro = $idDetalleRegistro;
      } 

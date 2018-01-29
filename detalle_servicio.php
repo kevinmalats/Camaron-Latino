@@ -10,7 +10,6 @@ class detalle_servicio
 
      function __construct() {
      }
-    
  
      function setIdDetalleServicio($idDetalleServicio){
        $this->idDetalleServicio = $idDetalleServicio;
