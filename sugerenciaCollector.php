@@ -9,7 +9,7 @@ function showsugerencia(){
 $rows = self::$db->getRows("SELECT * FROM sugerencia");
 $arraysugerencia= array();
 foreach($rows as $c){
-$aux = new sugerencia($c{'id_sugerencia'}, $c{'nombre'}, $c{'fecha'}, $c{'correo'}, $c{'telefono'}, $c{'mensaje'});
+$aux = new sugerencia($c{'id_sugerencia'}, $c{'fecha'}, $c{'mensaje'}, $c{'id_usuario'});
 array_push($arraysugerencia, $aux);
 }
 return $arraysugerencia;
