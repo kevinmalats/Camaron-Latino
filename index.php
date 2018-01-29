@@ -59,7 +59,7 @@ session_start();
                         <?php
                                 if ($_SESSION["perfil"]=="admin"){
                         ?>
-                            <li><a href="index.php"><strong>Bienvenido:  </strong> <?php echo $_SESSION['id'];?></a></li>
+                            <li><a href="indexadministrativo.php"><strong>Bienvenido:  </strong> <?php echo $_SESSION['id'];?></a></li>
                         <?php
                                 }else{
                         ?>
