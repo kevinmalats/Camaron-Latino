@@ -36,14 +36,14 @@ session_start();
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="indexadministrativo.php">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text">Uusarios</span>
           </a>
         </li>
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="tablaservicio.php">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text">Servicios</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
@@ -76,152 +76,85 @@ session_start();
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Tabla Usuario</li>
+        <li class="breadcrumb-item active">Creacion Usuario</li>
       </ol>
-    <ol class="breadcrumb">
-        <a href="creacionUsuarioPA.php?mensaje="><button>Crear</button></a>
-      </ol>
-
-      <!-- Example DataTables Card-->
-      <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Usuarios</div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                <tr>
-                  <th>Usuario</th>
-                  <th>Nombre</th>
-                  <th>Clave</th>
-                  <th>Editar</th>
-                  <th>Eliminar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                  require_once('usuarioCollector.php');
-                  $objetoUsuario = new usuarioCollector();
-                  $arrayUsu = $objetoUsuario->todaInfo();
-                  foreach($arrayUsu as $usuario){
-                      echo "<tr>";
-                      echo "<td>". $usuario->getUsuario() . "</td>";
-                      echo "<td>". $usuario->getNombre() . "</td>";
-                      echo "<td>". $usuario->getClave() . "</td>";
-                      echo "<td>". "<a class='material-icons button2 edit' href=''>edit</a>" . "</td>";
-                      echo "<td>". "<a class='material-icons button2 delete' href=''>delete</a>" . "</td>";
-                  }
-                ?>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
-                </tr>
-               
-                <tr>
-                  <td>Rhona Davidson</td>
-                  <td>Integration Specialist</td>
-                  <td>Tokyo</td>
-                  <td>55</td>
-                  <td>2010/10/14</td>
-                </tr>
-                <tr>
-                  <td>Paul Byrd</td>
-                  <td>Chief Financial Officer (CFO)</td>
-                  <td>New York</td>
-                  <td>64</td>
-                  <td>2010/06/09</td>
-                </tr>
-                <tr>
-                  <td>Gloria Little</td>
-                  <td>Systems Administrator</td>
-                  <td>New York</td>
-                  <td>59</td>
-                  <td>2009/04/10</td>
-                  
-                </tr>
-                <tr>
-                  <td>Bradley Greer</td>
-                  <td>Software Engineer</td>
-                  <td>London</td>
-                  <td>41</td>
-                  <td>2012/10/13</td>
-                  
-                </tr>
-                <tr>
-                  <td>Dai Rios</td>
-                  <td>Personnel Lead</td>
-                  <td>Edinburgh</td>
-                  <td>35</td>
-                  <td>2012/09/26</td>
-                  
-                </tr>
-                <tr>
-                  <td>Jenette Caldwell</td>
-                  <td>Development Lead</td>
-                  <td>New York</td>
-                  <td>30</td>
-                  <td>2011/09/03</td>
-                  
-                </tr>
-                <tr>
-                  <td>Yuri Berry</td>
-                  <td>Chief Marketing Officer (CMO)</td>
-                  <td>New York</td>
-                  <td>40</td>
-                  <td>2009/06/25</td>
-                  
-                </tr>
-                <tr>
-                  <td>Caesar Vance</td>
-                  <td>Pre-Sales Support</td>
-                  <td>New York</td>
-                  <td>21</td>
-                  <td>2011/12/12</td>
-                  
-                </tr>
-                <tr>
-                  <td>Doris Wilder</td>
-                  <td>Sales Assistant</td>
-                  <td>Sidney</td>
-                  <td>23</td>
-                  <td>2010/09/20</td>
-                  
-                </tr>
-                <tr>
-                  <td>Angelica Ramos</td>
-                  <td>Chief Executive Officer (CEO)</td>
-                  <td>London</td>
-                  <td>47</td>
-                  <td>2009/10/09</td>
-                  
-                </tr>
-                <tr>
-                  <td>Gavin Joyce</td>
-                  <td>Developer</td>
-                  <td>Edinburgh</td>
-                  <td>42</td>
-                  <td>2010/12/22</td>
-                  
-                </tr>
-               
-                <tr>
-                  <td>Donna Snider</td>
-                  <td>Customer Support</td>
-                  <td>New York</td>
-                  <td>27</td>
-                  <td>2011/01/25</td>
-                  
-                </tr>
-
-              </tbody>
-            </table>
+   <section id="tamasec">
+        <?php
+         if($_GET["mensaje"]){
+        ?>
+              <div class="text-center"><p><?php echo $_GET["mensaje"];?></p></div>
+        <?php
+         }
+        ?>
+        <div class="containerlogin">
+            <div class="card card-register mx-auto mt-5">
+              <div class="card-header">Registro de cuenta</div>
+              <div class="card-body">
+                <form action="crearUsuarioGeneral.php" method="post">
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <label>Ingrese nombre</label>
+                        <input class="form-control" placeholder="" name="nom">
+                      </div>
+                      <div class="col-md-6">
+                        <label>Ingrese cédula o ruc</label>
+                        <input class="form-control" placeholder="" name="ced">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <label>Ingrese telefono</label>
+                        <input class="form-control" placeholder="" name="tel">
+                      </div>
+                      <div class="col-md-6">
+                        <label>Correo electrónico</label>
+                        <input class="form-control" placeholder="" name="cor">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Direccion</label>
+                    <input class="form-control" placeholder="" name="dir">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <label>Usuario</label>
+                        <input class="form-control" type="text" placeholder="" name="usu">
+                      </div>
+                      <div class="col-md-6">
+                        <label>Contraseña</label>
+                        <input class="form-control"  type="password" placeholder="" name="con">
+                      </div>
+                    </div>
+                  </div>
+                    <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-md-12">
+                        <label>Rol</label>
+                      </div>
+                      <div class="col-md-12">
+                        <?php
+                            require_once(rolCollector);
+                        ?>
+                       <select name="select">
+                          <option value="value1">admin</option> 
+                          <option value="value2" selected>usuario</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                     <button type="submit"> Registrar </button>
+                  <a class="btn btn-primary btn-block" href="login.php">Registro</a>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-      </div>
+    </section>   
+     
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->

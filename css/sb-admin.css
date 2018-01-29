@@ -1,3 +1,19 @@
+
+.button2 {
+  color: #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+.edit:hover {
+  color: #0a79df;
+}
+
+.delete:hover {
+  color: #dc2a2a;
+}
+
 html {
   position: relative;
   min-height: 100%;

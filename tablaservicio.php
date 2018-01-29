@@ -76,16 +76,16 @@ session_start();
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Tabla Usuario</li>
+        <li class="breadcrumb-item active">Tabla Servicios</li>
       </ol>
     <ol class="breadcrumb">
-        <a href="creacionUsuarioPA.php?mensaje="><button>Crear</button></a>
+        <button>Crear</button>
       </ol>
 
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Usuarios</div>
+          <i class="fa fa-table"></i> Servicio</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
