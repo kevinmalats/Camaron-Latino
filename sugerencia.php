@@ -4,11 +4,12 @@ class sugerencia
 {
 
 private $idsugerencia;
-private $nombre;
+
 private $fecha;
-private $correo;
-private $telefono;
+
+
 private $mensaje;
+private $id_usuario;
 
 function __construct(){
 
@@ -22,13 +23,7 @@ function getIdsugerencia(){
 return $this->idsugerencia;
 }
 
-function setNombre($nombre){
-$this->nombre=$nombre;
-}
 
-function getNombre(){
-return $this->nombre;
-}
 
 function setFecha($fecha){
 $this->fecha=$fecha;
@@ -42,19 +37,6 @@ function setCorreo($correo){
 $this->correo=$correo;
 }
 
-function getCorreo(){
-return $this->correo;
-}
-
-
-function setTelefono($telefono){
-$this->telefono=$telefono;
-}
-
-function getTelefono(){
-return $this->telefono;
-}
-
 
 
 function setMensaje($mensaje){
@@ -63,6 +45,14 @@ $this->mensaje=$mensaje;
 
 function getMensaje(){
 return $this->mensaje;
+}
+
+function setIdusuario($id_usuario){
+$this->id_usuario=$id_usuario;
+}
+
+function getIdusuario(){
+return $this->id_usuario;
 }
 }
 ?> 
