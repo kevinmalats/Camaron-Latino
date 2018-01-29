@@ -47,7 +47,7 @@ session_start();
                         <li><a href="about-us.php">Nosotros</a></li>
                         <li><a href="servicios.php">Servicios</a></li>
                         <li><a href="productos.php">Productos</a></li> 
-                        <li><a href="contact-us.php">Contactenos</a></li> 
+                        <li><a href="contact-us.php">Contáctenos</a></li> 
                           <!--<li><a href="login.html">Login</a></li>-->
                         <?php
                             if ($_SESSION){
@@ -79,14 +79,14 @@ session_start();
         <div class="container">
             <div class="center">
                <h2>Productos</h2>
-               <p class="lead">Mostramos los diferentes productos disponibles por los diferentes proveedores de nuestra comunidad</p>
+               <p class="lead">Obtén los productos con los más altos estandares en calidad</p>
             </div>
         
 
             <ul class="portfolio-filter text-center">
                 <li><a class="btn btn-default active" href="#" data-filter="*" tabindex="-1">Todos</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".bootstrap" tabindex="-1">Electromecanico</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html" tabindex="-1">Civil</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap" tabindex="-1">Larvas</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html" tabindex="-1">Balanceado</a></li>
                 <li><a class="btn btn-default" href="#" data-filter=".wordpress" tabindex="-1">Otros</a></li>
             </ul><!--/#portfolio-filter-->
 
@@ -203,21 +203,25 @@ session_start();
    
 
     <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+            <div class="container">
+                <div class="row">
+                      <div class="col-sm-6">
+                    &copy; 2018 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Camarón Latino</a>. Todos los derechos reservados
                 </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                   
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                       </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div><!--/.container-->
     </footer><!--/#footer-->
 
     <script src="js/jquery.js"></script>
