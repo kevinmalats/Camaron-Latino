@@ -8,7 +8,7 @@ class rol
      function __construct() {
      }
     
-     function setIDRol($idrol){
+     function setIdRol($idrol){
        $this->idrol = $idrol;
      } 
      function getIdRol(){
@@ -20,7 +20,7 @@ class rol
      function getNombre(){
        return $this->nombre;
      }
-     function setDesccripcion($descripcion){
+     function setDescripcion($descripcion){
        $this->descripcion = $descripcion;
      } 
      function getDescripcion(){

@@ -2,14 +2,39 @@
 
 include_once('usuario.php');
 include_once('Collector.php');
+include_once('credencialCollector.php');
+include_once('rolCollector.php');
 
 class usuarioCollector extends Collector
 {
+    function todaInfo() {
+        $rows = self::$db->getRows("SELECT * FROM public.usuario ");        
+          $arrayUsuario= array();          
+        foreach ($rows as $c){
+          $aux = new usuario();
+          $aux->setIdUsuario($c{'id_usuario'});
+          $aux->setNombre($c{'nombre'});
+          $aux->setIdentificacion($c{'identificacion'});
+          $aux->setCorreo($c{'correo'});
+          $aux->setTelefono($c{'telefono'});
+          $aux->setDireccion($c{'direccion'});
+          $aux->setIdRol($c{'id_rol'});
+          $aux->setIdcredencial($c{'id_credencial'});
+          $rol = new rolCollector();
+          $r = $rol->showRol($aux->getIdRol());
+          $aux->setRol($r->getNombre());
+          $credencial = new credencialCollector();
+          $c = $credencial->showCredencial($aux->getIdcredencial());
+          $aux->setUsuario($c->getUsuario());
+          $aux->setClave($c->getClave());
+          array_push($arrayUsuario, $aux);
+          }
+         return $arrayUsuario;   
+        }     
     function showUsuarios() {
         $rows = self::$db->getRows("SELECT * FROM public.usuario ");        
-             
+          $arrayUsuario= array();          
         foreach ($rows as $c){
-          $arrayUsuario= array();   
           $aux = new usuario();
           $aux->setIdUsuario($c{'id_usuario'});
           $aux->setNombre($c{'nombre'});
@@ -85,7 +110,22 @@ class usuarioCollector extends Collector
         echo "crear completed<br>";
     }
 }
-    $objColector2= new usuarioCollector();
-    $usuario = $objColector2->comprobarUsuarioxIdCredencial(3);
-    echo $usuario->getNombre() . "   &&  " .$usuario->getIdRol() . "   &&   " . $usuario->getTelefono();
+   /* $objColector = new usuarioCollector();
+    
+    //print_r($credencial);
+
+    foreach($objColector->todaInfo() as $credencial){
+    echo "0: ". $credencial->getIdCredencial()."<br>";
+    echo "1: ". $credencial->getNombre()."<br>";
+    echo "2: ". $credencial->getIdentificacion()."<br>";
+    echo "3: ". $credencial->getCorreo()."<br>";
+    echo "4: ". $credencial->getTelefono()."<br>";
+    echo "5: ". $credencial->getDireccion()."<br>";
+    echo "6: ". $credencial->getIdRol()."<br>";
+    echo "7: ". $credencial->getIdcredencial()."<br>";
+    echo "8: ". $credencial->getUsuario()."<br>";
+    echo "9: ". $credencial->getClave()."<br>";
+    echo "10: ". $credencial->getRol()."<br>";
+    echo "<br>";
+    }*/
 ?>

@@ -8,9 +8,9 @@ class credencialCollector extends Collector
   
   function showCredenciales() {
     $rows = self::$db->getRows("SELECT * FROM public.credencial ");        
-           
+        $arrayCredencial= array();      
     foreach ($rows as $c){
-    $arrayCredencial= array(); 
+  
       $aux = new credencial();
       $aux->setIdCredencial($c{'id_credencial'});
       $aux->setUsuario($c{'usuario'});
@@ -56,11 +56,17 @@ class credencialCollector extends Collector
         $insertarrow = self::$db->insertRow("INSERT INTO public.credencial (usuario,clave) VALUES (?,?)", array ("{$usu}","{$cla}"));
     }
 }
-    $objColector = new credencialCollector();
+    //$objColector = new credencialCollector();
     
-    $credencial = $objColector->comprobarCredencial('cmoncayo');
-    echo "id: ". $credencial->getIdCredencial()."<br>";
-    echo "id: ". $credencial->getUsuario()."<br>";
-    echo "id: ". $credencial->getClave()."<br>";
-    print_r($credencial);
+    //$credencial = $objColector->showCredencial(4);
+    //echo "1: ". $credencial->getIdCredencial()."<br>";
+    //echo "2: ". $credencial->getUsuario()."<br>";
+    //echo "3: ". $credencial->getClave()."<br>";
+    //print_r($credencial);
+
+    //foreach($objColector->showCredenciales() as $rol){
+    //echo "1: ". $rol->getIdCredencial()."<br>";
+    //echo "2: ". $rol->getUsuario()."<br>";
+    //echo "3: ". $rol->getClave()."<br>";
+    //}
 ?>
