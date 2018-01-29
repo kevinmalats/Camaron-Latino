@@ -90,7 +90,7 @@ session_start();
             <div class="card card-register mx-auto mt-5">
               <div class="card-header">Registro de cuenta</div>
               <div class="card-body">
-                <form action="crearUsuarioGeneral.php" method="post">
+                <form action="creacionAdministrativaUsuario.php" method="post">
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col-md-6">
@@ -138,12 +138,16 @@ session_start();
                       </div>
                       <div class="col-md-12">
                         <?php
-                            require_once(rolCollector);
-                        ?>
-                       <select name="select">
-                          <option value="value1">admin</option> 
-                          <option value="value2" selected>usuario</option>
-                        </select>
+                            require_once('rolCollector.php');
+                            $objeto = new rolCollector();
+                            echo "<select name='select' id='select'>";
+                            foreach($objeto->showRoles() as $r){
+                                $id = $r->getIdRol();
+                                $no = $r->getNombre();
+                                echo "<option value='$id' selected>$no</option>";
+                            }
+                          echo "</select>";
+                        ?>   
                       </div>
                     </div>
                   </div>
