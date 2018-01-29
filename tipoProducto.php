@@ -33,6 +33,7 @@ $this->descripcion=$descripcion;
 function getDescripcion(){
 return $this->descripcion;
 }
+}
 ?> 
 
 
