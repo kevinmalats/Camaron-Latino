@@ -92,8 +92,7 @@ session_start();
                         <label >Contraseña</label>
                         <input class="form-control" type="password" placeholder="" type="text" name="cla">
                     </div>
-                    <a class="btn btn-primary btn-block" type="submit" href="validacredencial.php">Login</a>
-                    <button type="submit"> ENVIAR </button>
+                    <button class="btn btn-primary btn-block" type="submit"> ENVIAR </button>
                 </form>
                 <div class="text-center">
                     <br>

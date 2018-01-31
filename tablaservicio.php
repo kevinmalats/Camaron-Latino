@@ -79,7 +79,7 @@ session_start();
         <li class="breadcrumb-item active">Tabla Servicios</li>
       </ol>
     <ol class="breadcrumb">
-        <button>Crear</button>
+        <a><button class="btn btn-primary btn-block">Crear</button></a>
       </ol>
 
       <!-- Example DataTables Card-->
